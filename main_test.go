@@ -14,22 +14,22 @@ import (
 	"testing"
 
 	"github.com/gorilla/mux"
-	"github.com/jmlattanzi/assessment/controller"
-	"github.com/jmlattanzi/assessment/models"
+	"github.com/jmlattanzi/golang-assessment/models"
+	"github.com/jmlattanzi/golang-assessment/personcontroller"
 	"github.com/stretchr/testify/assert"
 )
 
 func Router() *mux.Router {
 	router := mux.NewRouter()
 
-	router.HandleFunc("/person", controller.GetAllPeopleHandler).Methods("GET")
-	router.HandleFunc("/person", controller.AddPersonHandler).Methods("POST")
-	router.HandleFunc("/person/{id}", controller.GetSinglePersonHandler).Methods("GET")
-	router.HandleFunc("/person/{id}", controller.EditPersonHandler).Methods("PUT")
-	router.HandleFunc("/person/{id}", controller.DeletePersonHandler).Methods("DELETE")
+	router.HandleFunc("/person", personcontroller.GetAllPeopleHandler).Methods("GET")
+	router.HandleFunc("/person", personcontroller.AddPersonHandler).Methods("POST")
+	router.HandleFunc("/person/{id}", personcontroller.GetSinglePersonHandler).Methods("GET")
+	router.HandleFunc("/person/{id}", personcontroller.EditPersonHandler).Methods("PUT")
+	router.HandleFunc("/person/{id}", personcontroller.DeletePersonHandler).Methods("DELETE")
 
-	router.HandleFunc("/export", controller.ExportToCSVHandler).Methods("GET")
-	router.HandleFunc("/import", controller.ImportCSVHandler).Methods("POST")
+	router.HandleFunc("/export", personcontroller.ExportToCSVHandler).Methods("GET")
+	router.HandleFunc("/import", personcontroller.ImportCSVHandler).Methods("POST")
 
 	return router
 }
