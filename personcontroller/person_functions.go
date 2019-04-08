@@ -1,4 +1,4 @@
-package controller
+package personcontroller
 
 import (
 	"encoding/csv"
@@ -8,8 +8,8 @@ import (
 	"os"
 	"strconv"
 
-	"github.com/jmlattanzi/assessment/db"
-	"github.com/jmlattanzi/assessment/models"
+	"github.com/jmlattanzi/golang-assessment/db"
+	"github.com/jmlattanzi/golang-assessment/models"
 )
 
 // GetAllPeople ...Returns everyone

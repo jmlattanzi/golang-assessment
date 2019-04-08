@@ -5,9 +5,9 @@ import (
 	"fmt"
 	"log"
 
-	"github.com/jmlattanzi/assessment/models"
+	"github.com/jmlattanzi/golang-assessment/models"
 
-	"github.com/jmlattanzi/assessment/config"
+	"github.com/jmlattanzi/golang-assessment/config"
 	_ "github.com/lib/pq"
 )
 

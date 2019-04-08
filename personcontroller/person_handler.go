@@ -1,4 +1,4 @@
-package controller
+package personcontroller
 
 import (
 	"encoding/csv"
@@ -9,7 +9,7 @@ import (
 	"strconv"
 
 	"github.com/gorilla/mux"
-	"github.com/jmlattanzi/assessment/models"
+	"github.com/jmlattanzi/golang-assessment/models"
 )
 
 // GetAllPeopleHandler ...Returns all people from the DB

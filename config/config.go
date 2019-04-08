@@ -6,7 +6,7 @@ import (
 	"log"
 	"os"
 
-	"github.com/jmlattanzi/assessment/models"
+	"github.com/jmlattanzi/golang-assessment/models"
 )
 
 var config models.Config
